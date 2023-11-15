@@ -23,7 +23,8 @@ To address this gap and make a meaningful difference, I am embarking on this jou
 This innovative application will serve as a platform for kids to explore, engage, and learn about the SDGs. It will include a variety of activities, from games and quizzes to interactive challenges. Through these activities, children can make choices and receive instant feedback on how these choices align with the SDGs. Each SDG will be presented as a distinct module or level, with the completion of each module marking a significant milestone. This modular approach will enable me continually refine and improve the app, ensuring that each module functions as a minimum viable product (MVP).
 
 My project not only aims to address a critical educational need but also presents a substantial business opportunity. By fostering a sense of social and environmental responsibility in children and by actively contributing to their education about the SDGs, it could potentially become integrated into teaching curriculum and it could be used as a means for teachers to educate kids. 
-<img width="276" alt="Screenshot 2023-11-14 200911" src="https://github.com/KeshiroM/Tvarus/assets/98908030/eef5ad82-4e59-4919-90b9-419ede61dda4">
+<p>
+<img width="276" alt="Screenshot 2023-11-14 200911" src="https://github.com/KeshiroM/Tvarus/assets/98908030/eef5ad82-4e59-4919-90b9-419ede61dda4"></p>
 
 
 
