@@ -1,21 +1,35 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const ModulesScreen = ({ route }) => {
   const { username } = route.params;
+  const navigation = useNavigation();
+  const navigateToClimateAction = () => {
+    navigation.navigate('ClimateAction');
+  };
+  const navigateToLifeonland = () => {
+    navigation.navigate('Lifeonland');
+  };
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Modules</Text>
       <Text style={styles.welcomeText}>Welcome, {username}!</Text>
       <View style={styles.moduleContainer}>
-        <TouchableOpacity style={styles.module}>
+        <TouchableOpacity style={styles.module} onPress={navigateToClimateAction}>
           <Image source={require('./assets/sdg13.png')} style={styles.moduleImage} />
           <Text style={styles.moduleTitle}>Climate Action</Text>
-         
+        </TouchableOpacity><Text></Text>
+        <TouchableOpacity style={styles.module}onPress={navigateToLifeonland}>
+          <Image source={require('./assets/sdg15.png')} style={styles.moduleImage} />
+          <Text style={styles.moduleTitle}>Life on Land</Text> 
         </TouchableOpacity>
-        
-        {}
+        <TouchableOpacity style={styles.module}>
+          <Image source={require('./assets/sdg14.png')} style={styles.moduleImage} />
+          <Text style={styles.moduleTitle}>Life below Water</Text>
+        </TouchableOpacity><Text>{'\n'}</Text>
+
       </View>
     </View>
   );
@@ -44,8 +58,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   module: {
-    width: 150,
-    height: 150,
+    width: 200,
+    height: 170,
     backgroundColor: 'white',
     margin: 10,
     alignItems: 'center',

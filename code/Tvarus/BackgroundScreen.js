@@ -3,6 +3,7 @@ import { View, Image, StyleSheet, TouchableOpacity, Text } from 'react-native';
 import * as Font from 'expo-font';
 
 const BackgroundScreen = ({ navigation }) => {
+  
   const handlePlayButtonPress = () => {
     navigation.navigate('UsernameInput');
   };
@@ -26,7 +27,8 @@ const BackgroundScreen = ({ navigation }) => {
     <View style={styles.container}>
       <View style={styles.background}>
         {fontLoaded ? ( 
-          <Text style={styles.welcomeText}>Welcome to Tvarus!</Text>
+          <Text style={styles.welcomeText}>Welcome to Tvarus! Learn about sustainability</Text>
+          
         ) : null}
         <Image
           source={require('./assets/logo.png')}style={styles.logo}
@@ -54,14 +56,14 @@ const styles = StyleSheet.create({
   },
   welcomeText: {
     fontSize: 24,
-    color: 'black',
+    color: 'white',
     fontFamily: 'Charmonman',
     fontWeight: 'bold',
     marginVertical: 18,
   },
   logo: {
-    width: 100,
-    height: 100,
+    width: 500,
+    height: 500,
     borderRadius: 15,
   },
   playButton: {
