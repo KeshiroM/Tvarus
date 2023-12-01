@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import * as Font from 'expo-font'; // Import Font from Expo
 
@@ -27,6 +27,7 @@ const ClimateActionScreen = () => {
   };
 
   return (
+    <ScrollView style={styles.scroll}>
     <View style={styles.container}>
       <Text style={styles.title}>Climate Action</Text>
 
@@ -45,6 +46,7 @@ const ClimateActionScreen = () => {
       </TouchableOpacity>
       <Text style={styles.moduleTitle}>Maintain your garden</Text>
     </View>
+    </ScrollView>
   );
 };
 
@@ -88,6 +90,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color:'white',
   },
+  scroll:{
+    flex:1,
+    backgroundColor: '#2E3A43',
+  }, 
   gif: {
     width: 210,
     height: 205,

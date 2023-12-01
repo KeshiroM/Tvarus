@@ -1,7 +1,7 @@
-import React,{useEffect,useState} from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, Image, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import * as Font from 'expo-font'; // Import Font from Expo
+import * as Font from 'expo-font';
 
 const Lifeonland = () => {
   const navigation = useNavigation();
@@ -22,7 +22,6 @@ const Lifeonland = () => {
     async function loadCustomFont() {
       await Font.loadAsync({
         'Charmonman': require('./assets/font/Charmonman-Bold.ttf'),
-        
       });
       setFontLoaded(true);
     }
@@ -31,29 +30,36 @@ const Lifeonland = () => {
   }, []);
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>LIFE ON LAND</Text>
+    <ScrollView contentContainerStyle={styles.scrollView}>
+      <View style={styles.container}>
+        <Text style={styles.title}>LIFE ON LAND</Text>
 
-      <Text style={styles.description}>PROTECT, RESTORE AND PROMOTE SUSTAINABLE USE OF TERRESTRIAL ECOSYSTEMS, SUSTAINABLY MANAGE FORESTS, COMBAT DESERTIFICATION, AND HALT AND REVERSE LAND DEGRADATION AND HALT BIODIVERSITY LOSS(SOURCE:UNITED NATIONS)</Text>
+        <Text style={styles.description}>
+          PROTECT, RESTORE AND PROMOTE SUSTAINABLE USE OF TERRESTRIAL ECOSYSTEMS, SUSTAINABLY MANAGE FORESTS, COMBAT DESERTIFICATION, AND HALT AND REVERSE LAND DEGRADATION AND HALT BIODIVERSITY LOSS(SOURCE:UNITED NATIONS)
+        </Text>
 
-      <TouchableOpacity style={styles.module} onPress={navigateToRecycling}>
-        <Image source={require('./assets/recyling.png')} style={styles.gif} />
-      </TouchableOpacity>
-      <Text style={styles.moduleTitle}>RECYCLE RACE</Text>
-      <TouchableOpacity style={styles.module} onPress={navigateToCarbon}>
-        <Image source={require('./assets/carbon.jpg')} style={styles.gif} />
-      </TouchableOpacity>
-      
-      <Text style={styles.moduleTitle}>CARBON FOOTPRINT CALCULATOR</Text>
-      <TouchableOpacity style={styles.module} onPress={navigateToCar}>
-        <Image source={require('./assets/car.jpg')} style={styles.gif} />
-      </TouchableOpacity>
-      <Text style={styles.moduleTitle}>CHOOSE A CAR</Text>
-    </View>
+        <TouchableOpacity style={styles.module} onPress={navigateToRecycling}>
+          <Image source={require('./assets/recyling.png')} style={styles.gif} />
+        </TouchableOpacity>
+        <Text style={styles.moduleTitle}>RECYCLE RACE</Text>
+        <TouchableOpacity style={styles.module} onPress={navigateToCarbon}>
+          <Image source={require('./assets/carbon.jpg')} style={styles.gif} />
+        </TouchableOpacity>
+
+        <Text style={styles.moduleTitle}>CARBON FOOTPRINT CALCULATOR</Text>
+        <TouchableOpacity style={styles.module} onPress={navigateToCar}>
+          <Image source={require('./assets/car.jpg')} style={styles.gif} />
+        </TouchableOpacity>
+        <Text style={styles.moduleTitle}>CHOOSE A CAR</Text>
+      </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
+  scrollView: {
+    flexGrow: 1,
+  },
   container: {
     flex: 1,
     backgroundColor: '#2E3A43',
@@ -72,7 +78,7 @@ const styles = StyleSheet.create({
   description: {
     color: 'white',
     textAlign: 'center',
-    fontFamily:'Charmonman',
+    fontFamily: 'Charmonman',
     marginVertical: 15,
     fontWeight: 'bold',
   },
@@ -93,7 +99,6 @@ const styles = StyleSheet.create({
   gif: {
     width: 210,
     height: 205,
-    
   },
 });
 

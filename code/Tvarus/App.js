@@ -11,6 +11,10 @@ import Lifeonland from './Lifeonland';
 import Recyling from './Recycling';
 import Carbon from './Carbon';
 import Car from './Car'
+import Lifebelowwater from './Lifebelowwater';
+import QuizPage from "./QuizPage";
+import Result from "./Result";
+import Coral from "./Coral";
 
 const Stack = createStackNavigator();
 
@@ -30,6 +34,10 @@ const App = ({ navigation }) => {
         <Stack.Screen name="Recycling" component={Recyling} options={{ title: 'Recycling' }} />
         <Stack.Screen name="Lifeonland" component={Lifeonland} options={{ title: 'Lifeonland' }} />
         <Stack.Screen name="Car" component={Car} options={{ title: 'Car' }} />
+        <Stack.Screen name="Lifebelowwater" component={Lifebelowwater} options={{ title: 'Lifebelowwater' }} />
+        <Stack.Screen name="Result" component={Result} options={{ title: 'Result' }} />
+        <Stack.Screen name="QuizPage" component={QuizPage} options={{ title: 'QuizPage' }} />
+        <Stack.Screen name="Coral" component={Coral} options={{ title: 'Coral' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity,Animated } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const ModulesScreen = ({ route }) => {
@@ -11,7 +11,11 @@ const ModulesScreen = ({ route }) => {
   const navigateToLifeonland = () => {
     navigation.navigate('Lifeonland');
   };
-
+  const av = new Animated.Value(0);
+  av.addListener(() => {return});
+  const navigateToLifebelowwater = () => {
+    navigation.navigate('Lifebelowwater');
+  };
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Modules</Text>
@@ -25,8 +29,8 @@ const ModulesScreen = ({ route }) => {
           <Image source={require('./assets/sdg15.png')} style={styles.moduleImage} />
           <Text style={styles.moduleTitle}>Life on Land</Text> 
         </TouchableOpacity>
-        <TouchableOpacity style={styles.module}>
-          <Image source={require('./assets/sdg14.png')} style={styles.moduleImage} />
+        <TouchableOpacity style={styles.module}  onPress={navigateToLifebelowwater} >
+          <Image source={require('./assets/sdg14.png')}style={styles.moduleImage} />
           <Text style={styles.moduleTitle}>Life below Water</Text>
         </TouchableOpacity><Text>{'\n'}</Text>
 

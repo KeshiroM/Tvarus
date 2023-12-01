@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet,Animated } from 'react-native';
 import * as Font from 'expo-font'; // Import Font from Expo
 
 const UsernameInputScreen = ({ navigation }) => {
@@ -16,7 +16,8 @@ const UsernameInputScreen = ({ navigation }) => {
       });
       setFontLoaded(true);
     }
-  
+    const av = new Animated.Value(0);
+    av.addListener(() => {return});
     loadCustomFont();
   }, []);
 

@@ -103,17 +103,19 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     marginBottom: 15,
     height: 40,
+    borderRadius:10,
   },
   picker: {
     borderWidth: 1,
     borderColor: 'black',
     marginBottom: 15,
+    borderRadius: 15,
   },
   button: {
     backgroundColor: 'blue',
     padding: 15,
     alignItems: 'center',
-    borderRadius: 5,
+    borderRadius: 15,
     marginBottom: 20,
   },
   buttonText: {

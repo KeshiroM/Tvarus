@@ -1,7 +1,7 @@
 import React, { useEffect,useState,useRef } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Alert,ScrollView } from 'react-native';
 import LottieView from 'lottie-react-native';
-
+import * as Font from 'expo-font';
 const EnergyMonitor = () => {
   const [energyUsage, setEnergyUsage] = useState(0);
   const tvanim = useRef(null);
@@ -36,6 +36,7 @@ const EnergyMonitor = () => {
   };
 
   return (
+    <ScrollView >
     <View style= {styles.background}>
     <View style={{ alignItems: 'center', justifyContent: 'center' }}>
       <Text style= {styles.title} >Energy Usage: {energyUsage} kWh</Text>
@@ -67,11 +68,9 @@ const EnergyMonitor = () => {
         <TouchableOpacity onPress={() => handleAppliancePress(7,cmanim)}>
           <LottieView ref={cmanim}source={require('./assets/coffeemaker.json')} style={styles.applianceAnimation} loop={false}/>
           <Text style= {styles.text}> <Text>{'   '}</Text>Coffee Maker, 6kWh</Text></TouchableOpacity>
-        {/* ... More buttons for other appliances */}
       </View>
 
-      <View style={{ flexDirection: 'row', marginTop: 20 }}>
-        {/* Buttons for user actions */}
+      <View style={{ flexDirection: 'row', marginTop: 40 }}>
         <TouchableOpacity style={styles.stopButton} onPress={() => setEnergyUsage(0)}>
           <Text>Reset Meter</Text>
         </TouchableOpacity>
@@ -82,6 +81,7 @@ const EnergyMonitor = () => {
       </View>
     </View>
     </View>
+    </ScrollView>
   );
 };
 
@@ -94,11 +94,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#6082B6',
     padding: 10,
     margin: 10,
+    borderRadius: 10,
   },
   background:{
     backgroundColor: '#767B7E',
     alignItems: 'center',
     paddingTop: 10,
+    flex:1,
     paddingHorizontal: 2,
   },
   text:{
@@ -115,6 +117,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#6082B6',
     padding: 10,
     margin: 10,
+    borderRadius: 10,
   },
 });
 

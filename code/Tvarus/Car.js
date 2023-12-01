@@ -6,7 +6,7 @@ const Car = () => {
 
   const cars = [
     { id: 1, title: 'Car 1', description: 'This is a sporty and fast sedan that uses both Gas and it costs $70,000. Stacey would need to lend $20,000', image: require('./assets/c4.png') },
-    { id: 2, title: 'Car 2', description: 'This is a fully electric car and it costs $ 55,000. Stacey would need to lend $5,000 to but.', image: require('./assets/c2.jpg') },
+    { id: 2, title: 'Car 2', description: 'This is a fully electric car and it costs $ 55,000. Stacey would need to lend $5,000 to buy.', image: require('./assets/c2.jpg') },
     { id: 3, title: 'Car 3', description: 'This sedan is a fully gas car and it costs $20,000', image: require('./assets/c3.png') },
     { id: 4, title: 'Car 4', description: 'This 2 door car is fully electric and costs $40,000', image: require('./assets/c1.png') },
     { id: 5, title: 'Car 5', description: 'This Off-road SUV built for adventurous journeys uses competely gas and costs $45,000.', image: require('./assets/c5.jpg') },
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     padding: 10,
     alignItems: 'center',
-    borderRadius: 5,
+    borderRadius: 15,
   },
   selectedCarBox: {
     backgroundColor: 'lightblue',
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     padding: 15,
     alignItems: 'center',
-    borderRadius: 5,
+    borderRadius: 10,
     marginTop: 20,
   },
   buttonText: {

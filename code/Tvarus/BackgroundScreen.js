@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { View, Image, StyleSheet, TouchableOpacity, Text } from 'react-native';
+import { View, Image, StyleSheet, TouchableOpacity, Text, Animated } from 'react-native';
 import * as Font from 'expo-font';
+
+
 
 const BackgroundScreen = ({ navigation }) => {
   
@@ -18,6 +20,8 @@ const BackgroundScreen = ({ navigation }) => {
       });
       setFontLoaded(true);
     }
+    const av = new Animated.Value(0);
+    av.addListener(() => {return});
 
     loadCustomFont();
   }, []);

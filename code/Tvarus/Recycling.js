@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Image, TouchableOpacity, ScrollView, StyleSheet, Dimensions } from 'react-native';
+import { View,Alert, Text, Image, TouchableOpacity, ScrollView, StyleSheet, Dimensions } from 'react-native';
 
 const imageSources = {
   r1: require('./assets/r1.png'),
@@ -37,9 +37,9 @@ const Recycling = () => {
   const handleSubmit = () => {
     if (selectedImages.size === 7) {
       // If the user has selected all 'r' images
-      alert('Passed! Recycling prevents the emissions of many greenhouse gases and water pollutants, and saves energy. Using recovered material generates less solid waste. Recycling helps to reduce the pollution caused by the extraction and processing of virgin materials.'); // Passed the level
+      Alert.alert('Congrats!','Passed! Recycling prevents the emissions of many greenhouse gases and water pollutants, and saves energy. Using recovered material generates less solid waste. Recycling helps to reduce the pollution caused by the extraction and processing of virgin materials.'); // Passed the level
     } else {
-      alert('Failed! Please retry. Remember you must select all items that can be recycled and you must not select any item that can not be recycled'); // Failed the level
+      Alert.alert('Ooops!','Failed! Please retry. Remember you must select all items that can be recycled and you must not select any item that can not be recycled'); // Failed the level
       setSelectedImages(new Set()); // Reset selected images
     }
   };
@@ -73,7 +73,7 @@ const Recycling = () => {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>Recycling Game</Text>
-      <Text style={styles.body}>For this excecise you are suppossed to select all the items that can be recyled and then press submit, if you do not select all the recylable items or if you do notselect an item that can not be recyled you will fail this level</Text>
+      <Text style={styles.body}>For this excecise you are suppossed to select all the items that can be recyled and then press submit, if you do not select all the recylable items or if you select an item that can not be recyled you will fail this level</Text>
       {imageRows}
       <TouchableOpacity style={styles.button} onPress={handleSubmit}>
         <Text>Submit</Text>
@@ -111,6 +111,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderWidth: 1,
     borderColor: 'black',
+    borderRadius: 10,
   },
   image: {
     width: '100%',
@@ -120,8 +121,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     padding: 15,
     alignItems: 'center',
-    borderRadius: 5,
     marginBottom: 20,
+    borderRadius: 10,
   },
 });
 
