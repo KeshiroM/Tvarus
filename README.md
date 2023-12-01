@@ -28,11 +28,12 @@ My project not only aims to address a critical educational need but also present
 <a href="https://youtu.be/kt6POEbIjGg">ADVERTISEMENT VLOG</a></br>
 <a href="https://youtu.be/OVXJsafDdJ8">LONGER DEMO VLOG OF APPLICATION</a></br>
 <a href="https://github.com/KeshiroM/Tvarus/blob/main/Project%20documentation/Final%20scrum-status%20report.pdf">SCRUM 3 status report</a></br>
-<a href="https://github.com/KeshiroM/Tvarus/blob/main/Project%20documentation/SCRUM%202-Project%20Status%20Report.pdf">SCRUM 2 status report</a>
+<a href="https://github.com/KeshiroM/Tvarus/blob/main/Project%20documentation/SCRUM%202-Project%20Status%20Report.pdf">SCRUM 2 status report</a></br>
 <a href="https://github.com/KeshiroM/Tvarus/blob/main/Project%20documentation/SCRUM%201-%20Project%20Status%20Report.pdf">SCRUM 1 status report</a></br>
+<a href= "https://youtu.be/MrDXczLGqUo"> MY INITIAL VLOG </a> 
 <p> </p>
 <img width="276" alt="Screenshot 2023-11-14 200911" src="https://github.com/KeshiroM/Tvarus/assets/98908030/eef5ad82-4e59-4919-90b9-419ede61dda4">
 
 
 
-<a href= "https://youtu.be/MrDXczLGqUo"> MY INITIAL VLOG </a> 
+
